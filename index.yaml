@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   heimdall:
   - apiVersion: v2
+    appVersion: 2.6.41
+    created: "2023-03-09T15:19:50.972426-05:00"
+    description: A Helm chart for Kubernetes
+    digest: a2623ccbedd90a10537dda6a68b06aec31db493938a365e52331addbb2bc550a
+    name: heimdall
+    type: application
+    urls:
+    - https://github.com/mitre/heimdall2-helm/releases/download/heimdall-2.6.41/heimdall-2.6.41.tgz
+    version: 2.6.41
+  - apiVersion: v2
     appVersion: 2.4.8
     created: "2023-03-09T11:36:46.688127-05:00"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/mitre/heimdall2-helm/releases/download/heimdall-2.4.8/heimdall-2.4.8.tgz
     version: 2.4.8
-generated: "2023-03-09T11:36:46.68814-05:00"
+generated: "2023-03-09T15:19:50.972468-05:00"

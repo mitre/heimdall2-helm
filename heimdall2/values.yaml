@@ -81,6 +81,7 @@ heimdall:
      traefik.ingress.kubernetes.io/router.entrypoints: websecure
      traefik.ingress.kubernetes.io/router.tls: "true"
      traefik.ingress.kubernetes.io/service.sticky.cookie: "true"
+    #className:
     hosts:
       - host: heimdall-test.sandbox.c2il.org
         paths:

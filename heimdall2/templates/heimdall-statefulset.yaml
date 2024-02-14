@@ -29,11 +29,11 @@ spec:
       securityContext:
         {{- toYaml .Values.heimdall.podSecurityContext | nindent 8 }}
       volumes:
-        - name: injectedCerts
+        - name: injected-certs
           configMap:
             name: {{ .Values.certs.name }}
-        {{- range .Values.certs.processedCertsMountPaths }}
-        - name: "processedCerts - {{ . }}"
+              {{- range $index := .Values.certs.processedCertsMountPaths }}
+        - name: "processed-certs-{{ $index }}"
           emptyDir:
         {{- end }}
       initContainers:
@@ -44,11 +44,11 @@ spec:
           imagePullPolicy: {{ .Values.certs.image.pullPolicy }}
           command: {{ .Values.certs.command }}
           volumeMounts:
-            - name: injectedCerts
+            - name: injected-certs
               mountPath: {{ .Values.certs.injectedCertsMountPath }}
-            {{- range .Values.certs.processedCertsMountPaths }}
-            - name: "processedCerts - {{ . }}"
-              mountPath: {{ . }}
+            {{- range $index, $path := .Values.certs.processedCertsMountPaths }}
+            - name: "processed-certs-{{ $index }}"
+              mountPath: {{ $path }}
             {{- end }}
       containers:
         - name: heimdall-front

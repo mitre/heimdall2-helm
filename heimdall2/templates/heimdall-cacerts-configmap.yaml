@@ -5,6 +5,5 @@ metadata:
   name: {{ .Values.certs.name }}
 data:
   {{- range .Values.certs.certificates }}
-  {{ .filename }}: |
-    {{ .contents }}
+  {{ .filename }}: {{ .contents | toYaml | indent 2 }}
   {{- end }}

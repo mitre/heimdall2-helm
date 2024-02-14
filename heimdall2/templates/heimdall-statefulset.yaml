@@ -32,7 +32,7 @@ spec:
         - name: injected-certs
           configMap:
             name: {{ .Values.certs.name }}
-        {{- range $index := .Values.certs.processedCertsMountPaths }}
+        {{- range $index, $path := .Values.certs.processedCertsMountPaths }}
         - name: "processed-certs-{{ $index }}"
           emptyDir:
         {{- end }}

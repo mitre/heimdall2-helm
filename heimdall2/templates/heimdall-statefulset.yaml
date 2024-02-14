@@ -60,9 +60,11 @@ spec:
             - name: http
               containerPort: 3000
           volumeMounts:
-            - name: processedCerts
-              mountPath: {{ .Values.certs.processedCertsMountPath }}
+            {{- range $index, $path := .Values.certs.processedCertsMountPaths }}
+            - name: "processed-certs-{{ $index }}"
+              mountPath: {{ $path }}
               readOnly: true
+            {{- end }}
           env:
             - name: NODE_ENV
               value: {{ .Values.nodeEnv | quote }}

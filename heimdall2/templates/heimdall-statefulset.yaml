@@ -43,7 +43,7 @@ spec:
           image: "{{ .Values.certs.image.repository }}:{{ .Values.certs.image.tag }}"
           imagePullPolicy: {{ .Values.certs.image.pullPolicy }}
           command: {{ .Values.certs.command }}
-          volumes:
+          volumeMounts:
             - name: injectedCerts
               mountPath: {{ .Values.certs.injectedCertsMountPath }}
             {{- range .Values.certs.processedCertsMountPaths }}

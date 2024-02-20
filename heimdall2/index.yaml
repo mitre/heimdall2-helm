@@ -1,0 +1,56 @@
+apiVersion: v1
+entries:
+  heimdall:
+  - annotations:
+      artifacthub.io/category: security
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: support
+          url: https://github.com/mitre/heimdall2-helm/issues
+        - name: Additional Security Automation Framework Resources
+          url: https://saf.mitre.org
+      artifacthub.io/maintainers: |
+        - name: MITRE SAF Team
+          email: saf@groups.mitre.org
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/screenshots: |
+        - title: Heimdall Security Data Visualization
+          url: https://github.com/mitre/docs-mitre-inspec/raw/master/images/Heimdall_demo.gif
+    apiVersion: v2
+    appVersion: release-latest
+    created: "2024-02-20T18:26:43.757666-05:00"
+    description: Heimdall2 lets you view, store, and compare automated security control
+      scan results.
+    digest: 7e5972b5e897020cdd0b2183d15343d9821dc7203781512e19b53e25f8568cc6
+    name: heimdall
+    type: application
+    urls:
+    - heimdall-3.1.9.tgz
+    version: 3.1.9
+  - annotations:
+      artifacthub.io/category: security
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: support
+          url: https://github.com/mitre/heimdall2-helm/issues
+        - name: Additional Security Automation Framework Resources
+          url: https://saf.mitre.org
+      artifacthub.io/maintainers: |
+        - name: MITRE SAF Team
+          email: saf@groups.mitre.org
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/screenshots: |
+        - title: Heimdall Security Data Visualization
+          url: https://github.com/mitre/docs-mitre-inspec/raw/master/images/Heimdall_demo.gif
+    apiVersion: v2
+    appVersion: release-latest
+    created: "2024-02-20T18:26:43.756769-05:00"
+    description: Heimdall2 lets you view, store, and compare automated security control
+      scan results.
+    digest: f1e479efb7f912fc9e63bbe862942079ee100541fe8ee571280b04716b1002f5
+    name: heimdall
+    type: application
+    urls:
+    - heimdall-3.0.0.tgz
+    version: 3.0.0
+generated: "2024-02-20T18:26:43.755835-05:00"

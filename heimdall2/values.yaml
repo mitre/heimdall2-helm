@@ -164,3 +164,6 @@ heimdall:
   tolerations: []
 
   affinity: {}
+
+# imagePullSecrets:
+#   - name: your-secret-name

@@ -38,10 +38,10 @@ The start_heimdall.sh script generates some of these values for you, and demonst
 helm repo add heimdall2-helm https://mitre.github.io/heimdall2-helm/
 helm repo update
 helm search repo heimdall2
-wget https://raw.githubusercontent.com/mitre/heimdall2-helm/master/values.yaml
+wget https://raw.githubusercontent.com/mitre/heimdall2-helm/main/values.yaml
 vi values.yaml # configure values.yaml for your organization
 helm install heimdall heimdall2-helm/heimdall --namespace heimdall --create-namespace -f values.yaml
-watch -n 15 kubectl get pods -n heimdall2
+watch -n 15 kubectl get pods -n heimdall
 ```
 
 Give it time for Heimdall2 to come fully up.  It has to "migrate" data, and the frontend site needs to build. It takes a few minutes.
@@ -52,10 +52,10 @@ If you've spun up Heimdall2 using the [start_heimdall2.sh](start_heimdall2.sh) s
 browser via exposing via `kubectl port-forward` like so
 
 ```
-kubectl port-forward -n heimdall service/heimdall2 8081:80
+kubectl port-forward -n heimdall service/heimdall2 8081:3000
 ```
 
-then open in your browser [http://localhost:8081(http://localhost:8081)
+then open in your browser [http://localhost:8081](http://localhost:8081)
 
 Or configure an ingress via your values file by adding an `ingress` configuration under
 `heimdall` in your values file likes so:

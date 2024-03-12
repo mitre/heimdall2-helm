@@ -83,7 +83,7 @@ postgresql:
 
   image:
     repository: postgres
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     tag: "13"
 
   persistence:
@@ -116,7 +116,7 @@ certs:
   name: heimdall-cacerts # name of the configmap that will include all the certs' file contents
   image: # which image with root/sufficient privileges will be used to take the injected certs and process them into the locations that the system will be looking for
     repository: registry.access.redhat.com/ubi8/ubi # the default Heimdall image is currently built on UBI 8
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     tag: "latest"
   command: "['sh', '-c', 'update-ca-trust']" # RHEL style distros use the `update-ca-trust` command to update the system CA trust store
   injectedCertsMountPath: /etc/pki/ca-trust/source/anchors # the location that `update-ca-trust` looks inside for user supplied certs
@@ -130,7 +130,7 @@ certs:
 heimdall:
   image:
     repository: mitre/heimdall2
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     tag: "release-latest"
 
   service:

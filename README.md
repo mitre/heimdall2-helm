@@ -52,7 +52,7 @@ If you've spun up Heimdall2 using the [start_heimdall2.sh](start_heimdall2.sh) s
 browser via exposing via `kubectl port-forward` like so
 
 ```
-kubectl port-forward -n heimdall service/heimdall2 8081:3000
+kubectl port-forward -n heimdall service/heimdall 8081:3000
 ```
 
 then open in your browser [http://localhost:8081](http://localhost:8081)

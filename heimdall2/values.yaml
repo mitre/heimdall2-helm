@@ -40,6 +40,9 @@ databaseUsername: postgres
 
 # externalUrl: 'public'/externally facing URL for your deployment (ex. for use in callback urls for auth integrations)
 
+# splunkHostUrl: default empty string (ex. https://your.splunk.domain.com)
+# tenableHostUrl: default empty string (ex. https://your.tenable.domain.com)
+
 # ldapEnabled: default false
 # ldapHost: url
 # ldapPort: default 389

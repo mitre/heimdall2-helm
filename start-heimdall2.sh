@@ -18,7 +18,7 @@ JWT_EXPIRE_TIME="1d"
 API_KEY_SECRET="$(openssl rand -hex 33)"
 NAMESPACE="heimdall"
 
-# Install heimdall
+# Install Heimdall
 helm install heimdall heimdall2-helm/heimdall \
     -n $NAMESPACE --create-namespace \
     -f heimdall2/values.yaml \

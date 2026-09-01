@@ -42,6 +42,10 @@ databaseUsername: postgres
 
 # splunkHostUrl: default empty string (ex. https://your.splunk.domain.com)
 # tenableHostUrl: default empty string (ex. https://your.tenable.domain.com)
+#   For multiple allowed hosts, use a YAML block scalar with one host per line:
+#   tenableHostUrl: |
+#     https://tenable-prod.example.com
+#     https://tenable-staging.example.com
 # forceTenableFrontend: default false (If true, the frontend will use Tenable.SC Lite features
 
 # ldapEnabled: default false

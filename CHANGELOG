@@ -1,3 +1,6 @@
+# 3.3.5
+Updated tenableHostUrl to reflect Heimdall implementation changes allowing multiple hosts separate by new-lines
+
 # 3.3.4
 Updated license
 Repo was renamed to heimdall-helm and corresponding documentation updates
